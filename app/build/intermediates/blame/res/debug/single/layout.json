@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "C:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\build\\intermediates\\res\\merged\\debug\\layout\\contact_row.xml",
+        "source": "C:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\src\\main\\res\\layout\\contact_row.xml"
+    },
+    {
+        "merged": "C:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_contacts.xml",
+        "source": "C:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\src\\main\\res\\layout\\activity_contacts.xml"
+    },
+    {
+        "merged": "C:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_contact_details.xml",
+        "source": "C:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\src\\main\\res\\layout\\activity_contact_details.xml"
+    }
+]

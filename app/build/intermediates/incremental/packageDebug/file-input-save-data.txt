@@ -1,0 +1,36 @@
+#Internal package file, do not edit.
+#Mon Apr 03 16:57:41 EDT 2017
+2.base=C\:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_1844aadd69c415f2f81880e6734c501427ab454e
+5.file=C\:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\xml\\prefs.xml
+5.set=ANDROID_RESOURCE
+3.base=C\:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_e5be127c2cc5dfbd2b0e3c8b202dea5f9a491f59
+6.file=C\:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\activity_contact_details.xml
+2.set=DEX
+10.set=ANDROID_RESOURCE
+10.file=C\:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\xml\\pref_headers.xml
+4.base=C\:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\build\\intermediates\\res\\resources-debug.ap_
+7.file=C\:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\activity_contacts.xml
+7.set=ANDROID_RESOURCE
+count=11
+0.file=C\:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\contact_row.xml
+5.base=C\:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\build\\intermediates\\res\\resources-debug.ap_
+8.file=C\:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\build\\intermediates\\res\\resources-debug.ap_\\AndroidManifest.xml
+4.set=ANDROID_RESOURCE
+6.base=C\:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\build\\intermediates\\res\\resources-debug.ap_
+1.file=C\:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\ic_launcher.png
+9.set=ANDROID_RESOURCE
+9.file=C\:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\build\\intermediates\\res\\resources-debug.ap_\\resources.arsc
+10.base=C\:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\build\\intermediates\\res\\resources-debug.ap_
+1.set=ANDROID_RESOURCE
+7.base=C\:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\build\\intermediates\\res\\resources-debug.ap_
+2.file=C\:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_1844aadd69c415f2f81880e6734c501427ab454e\\classes.dex
+6.set=ANDROID_RESOURCE
+0.base=C\:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\build\\intermediates\\res\\resources-debug.ap_
+8.base=C\:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\build\\intermediates\\res\\resources-debug.ap_
+3.file=C\:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_e5be127c2cc5dfbd2b0e3c8b202dea5f9a491f59\\classes.dex
+3.set=DEX
+1.base=C\:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\build\\intermediates\\res\\resources-debug.ap_
+9.base=C\:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\build\\intermediates\\res\\resources-debug.ap_
+4.file=C\:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\menu\\menu.xml
+8.set=ANDROID_RESOURCE
+0.set=ANDROID_RESOURCE
