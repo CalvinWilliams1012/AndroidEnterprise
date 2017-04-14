@@ -7,17 +7,17 @@
                     "startLine": 2,
                     "startColumn": 4,
                     "startOffset": 55,
-                    "endColumn": 60,
-                    "endOffset": 111
+                    "endColumn": 59,
+                    "endOffset": 110
                 },
                 "from": {
                     "file": "C:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
-                        "startOffset": 279,
-                        "endColumn": 60,
-                        "endOffset": 335
+                        "startOffset": 278,
+                        "endColumn": 59,
+                        "endOffset": 333
                     }
                 }
             },
@@ -25,28 +25,21 @@
                 "to": {
                     "startLine": 3,
                     "startColumn": 4,
-                    "startOffset": 116,
+                    "startOffset": 115,
                     "endColumn": 51,
-                    "endOffset": 163
+                    "endOffset": 162
                 },
                 "from": {
-                    "file": "C:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 25,
-                        "startColumn": 4,
-                        "startOffset": 999,
-                        "endColumn": 51,
-                        "endOffset": 1046
-                    }
+                    "file": "C:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 4,
                     "startColumn": 4,
-                    "startOffset": 168,
-                    "endColumn": 52,
-                    "endOffset": 216
+                    "startOffset": 167,
+                    "endColumn": 51,
+                    "endOffset": 214
                 },
                 "from": {
                     "file": "C:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\src\\main\\res\\values\\strings.xml",
@@ -54,8 +47,8 @@
                         "startLine": 4,
                         "startColumn": 4,
                         "startOffset": 81,
-                        "endColumn": 52,
-                        "endOffset": 129
+                        "endColumn": 51,
+                        "endOffset": 128
                     }
                 }
             },
@@ -63,75 +56,54 @@
                 "to": {
                     "startLine": 5,
                     "startColumn": 4,
-                    "startOffset": 221,
+                    "startOffset": 219,
                     "endColumn": 46,
-                    "endOffset": 263
+                    "endOffset": 261
                 },
                 "from": {
-                    "file": "C:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 5,
-                        "startColumn": 4,
-                        "startOffset": 134,
-                        "endColumn": 46,
-                        "endOffset": 176
-                    }
+                    "file": "C:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 6,
                     "startColumn": 4,
-                    "startOffset": 268,
+                    "startOffset": 266,
                     "endColumn": 44,
-                    "endOffset": 308
+                    "endOffset": 306
                 },
                 "from": {
-                    "file": "C:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 8,
-                        "startColumn": 4,
-                        "startOffset": 204,
-                        "endColumn": 44,
-                        "endOffset": 244
-                    }
+                    "file": "C:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 7,
                     "startColumn": 4,
-                    "startOffset": 313,
+                    "startOffset": 311,
                     "endColumn": 93,
-                    "endOffset": 402
+                    "endOffset": 400
                 },
                 "from": {
-                    "file": "C:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 32,
-                        "startColumn": 4,
-                        "startOffset": 1294,
-                        "endColumn": 93,
-                        "endOffset": 1383
-                    }
+                    "file": "C:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 8,
                     "startColumn": 4,
-                    "startOffset": 407,
-                    "endColumn": 48,
-                    "endOffset": 451
+                    "startOffset": 405,
+                    "endColumn": 51,
+                    "endOffset": 452
                 },
                 "from": {
                     "file": "C:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-                        "startLine": 21,
+                        "startLine": 15,
                         "startColumn": 4,
-                        "startOffset": 846,
-                        "endColumn": 48,
-                        "endOffset": 890
+                        "startOffset": 486,
+                        "endColumn": 51,
+                        "endOffset": 533
                     }
                 }
             },
@@ -139,18 +111,18 @@
                 "to": {
                     "startLine": 9,
                     "startColumn": 4,
-                    "startOffset": 456,
-                    "endColumn": 59,
-                    "endOffset": 511
+                    "startOffset": 457,
+                    "endColumn": 53,
+                    "endOffset": 506
                 },
                 "from": {
                     "file": "C:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-                        "startLine": 19,
+                        "startLine": 14,
                         "startColumn": 4,
-                        "startOffset": 737,
-                        "endColumn": 59,
-                        "endOffset": 792
+                        "startOffset": 432,
+                        "endColumn": 53,
+                        "endOffset": 481
                     }
                 }
             },
@@ -158,37 +130,30 @@
                 "to": {
                     "startLine": 10,
                     "startColumn": 4,
-                    "startOffset": 516,
-                    "endColumn": 53,
-                    "endOffset": 565
+                    "startOffset": 511,
+                    "endColumn": 48,
+                    "endOffset": 555
                 },
                 "from": {
-                    "file": "C:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 18,
-                        "startColumn": 4,
-                        "startOffset": 683,
-                        "endColumn": 53,
-                        "endOffset": 732
-                    }
+                    "file": "C:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 11,
                     "startColumn": 4,
-                    "startOffset": 570,
-                    "endColumn": 56,
-                    "endOffset": 622
+                    "startOffset": 560,
+                    "endColumn": 45,
+                    "endOffset": 601
                 },
                 "from": {
                     "file": "C:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-                        "startLine": 13,
+                        "startLine": 17,
                         "startColumn": 4,
-                        "startOffset": 399,
-                        "endColumn": 56,
-                        "endOffset": 451
+                        "startOffset": 586,
+                        "endColumn": 45,
+                        "endOffset": 627
                     }
                 }
             },
@@ -196,18 +161,18 @@
                 "to": {
                     "startLine": 12,
                     "startColumn": 4,
-                    "startOffset": 627,
-                    "endColumn": 58,
-                    "endOffset": 681
+                    "startOffset": 606,
+                    "endColumn": 47,
+                    "endOffset": 649
                 },
                 "from": {
                     "file": "C:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-                        "startLine": 12,
+                        "startLine": 16,
                         "startColumn": 4,
-                        "startOffset": 340,
-                        "endColumn": 58,
-                        "endOffset": 394
+                        "startOffset": 538,
+                        "endColumn": 47,
+                        "endOffset": 581
                     }
                 }
             },
@@ -215,18 +180,18 @@
                 "to": {
                     "startLine": 13,
                     "startColumn": 4,
-                    "startOffset": 686,
-                    "endColumn": 55,
-                    "endOffset": 737
+                    "startOffset": 654,
+                    "endColumn": 45,
+                    "endOffset": 695
                 },
                 "from": {
                     "file": "C:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-                        "startLine": 15,
+                        "startLine": 19,
                         "startColumn": 4,
-                        "startOffset": 514,
-                        "endColumn": 55,
-                        "endOffset": 565
+                        "startOffset": 680,
+                        "endColumn": 45,
+                        "endOffset": 721
                     }
                 }
             },
@@ -234,18 +199,18 @@
                 "to": {
                     "startLine": 14,
                     "startColumn": 4,
-                    "startOffset": 742,
-                    "endColumn": 57,
-                    "endOffset": 795
+                    "startOffset": 700,
+                    "endColumn": 47,
+                    "endOffset": 743
                 },
                 "from": {
                     "file": "C:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-                        "startLine": 14,
+                        "startLine": 18,
                         "startColumn": 4,
-                        "startOffset": 456,
-                        "endColumn": 57,
-                        "endOffset": 509
+                        "startOffset": 632,
+                        "endColumn": 47,
+                        "endOffset": 675
                     }
                 }
             },
@@ -253,18 +218,18 @@
                 "to": {
                     "startLine": 15,
                     "startColumn": 4,
-                    "startOffset": 800,
-                    "endColumn": 58,
-                    "endOffset": 854
+                    "startOffset": 748,
+                    "endColumn": 45,
+                    "endOffset": 789
                 },
                 "from": {
                     "file": "C:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-                        "startLine": 17,
+                        "startLine": 13,
                         "startColumn": 4,
-                        "startOffset": 624,
-                        "endColumn": 58,
-                        "endOffset": 678
+                        "startOffset": 386,
+                        "endColumn": 45,
+                        "endOffset": 427
                     }
                 }
             },
@@ -272,18 +237,18 @@
                 "to": {
                     "startLine": 16,
                     "startColumn": 4,
-                    "startOffset": 859,
-                    "endColumn": 53,
-                    "endOffset": 908
+                    "startOffset": 794,
+                    "endColumn": 47,
+                    "endOffset": 837
                 },
                 "from": {
                     "file": "C:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-                        "startLine": 16,
+                        "startLine": 12,
                         "startColumn": 4,
-                        "startOffset": 570,
-                        "endColumn": 53,
-                        "endOffset": 619
+                        "startOffset": 338,
+                        "endColumn": 47,
+                        "endOffset": 381
                     }
                 }
             },
@@ -291,18 +256,18 @@
                 "to": {
                     "startLine": 17,
                     "startColumn": 4,
-                    "startOffset": 913,
-                    "endColumn": 48,
-                    "endOffset": 957
+                    "startOffset": 842,
+                    "endColumn": 64,
+                    "endOffset": 902
                 },
                 "from": {
                     "file": "C:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-                        "startLine": 20,
+                        "startLine": 21,
                         "startColumn": 4,
-                        "startOffset": 797,
-                        "endColumn": 48,
-                        "endOffset": 841
+                        "startOffset": 793,
+                        "endColumn": 64,
+                        "endOffset": 853
                     }
                 }
             },
@@ -310,18 +275,18 @@
                 "to": {
                     "startLine": 18,
                     "startColumn": 4,
-                    "startOffset": 962,
-                    "endColumn": 83,
-                    "endOffset": 1041
+                    "startOffset": 907,
+                    "endColumn": 66,
+                    "endOffset": 969
                 },
                 "from": {
                     "file": "C:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-                        "startLine": 22,
+                        "startLine": 20,
                         "startColumn": 4,
-                        "startOffset": 895,
-                        "endColumn": 83,
-                        "endOffset": 974
+                        "startOffset": 726,
+                        "endColumn": 66,
+                        "endOffset": 788
                     }
                 }
             },
@@ -329,18 +294,18 @@
                 "to": {
                     "startLine": 19,
                     "startColumn": 4,
-                    "startOffset": 1046,
-                    "endColumn": 55,
-                    "endOffset": 1097
+                    "startOffset": 974,
+                    "endColumn": 62,
+                    "endOffset": 1032
                 },
                 "from": {
                     "file": "C:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-                        "startLine": 27,
+                        "startLine": 23,
                         "startColumn": 4,
-                        "startOffset": 1100,
-                        "endColumn": 55,
-                        "endOffset": 1151
+                        "startOffset": 923,
+                        "endColumn": 62,
+                        "endOffset": 981
                     }
                 }
             },
@@ -348,18 +313,18 @@
                 "to": {
                     "startLine": 20,
                     "startColumn": 4,
-                    "startOffset": 1102,
-                    "endColumn": 48,
-                    "endOffset": 1146
+                    "startOffset": 1037,
+                    "endColumn": 64,
+                    "endOffset": 1097
                 },
                 "from": {
                     "file": "C:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-                        "startLine": 26,
+                        "startLine": 22,
                         "startColumn": 4,
-                        "startOffset": 1051,
-                        "endColumn": 48,
-                        "endOffset": 1095
+                        "startOffset": 858,
+                        "endColumn": 64,
+                        "endOffset": 918
                     }
                 }
             },
@@ -367,38 +332,155 @@
                 "to": {
                     "startLine": 21,
                     "startColumn": 4,
-                    "startOffset": 1151,
-                    "endColumn": 61,
-                    "endOffset": 1208
+                    "startOffset": 1102,
+                    "endColumn": 48,
+                    "endOffset": 1146
                 },
                 "from": {
-                    "file": "C:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 29,
-                        "startColumn": 4,
-                        "startOffset": 1209,
-                        "endColumn": 61,
-                        "endOffset": 1266
-                    }
+                    "file": "C:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 22,
                     "startColumn": 4,
-                    "startOffset": 1213,
-                    "endColumn": 52,
-                    "endOffset": 1261
+                    "startOffset": 1151,
+                    "endColumn": 43,
+                    "endOffset": 1190
                 },
                 "from": {
                     "file": "C:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-                        "startLine": 28,
+                        "startLine": 25,
                         "startColumn": 4,
-                        "startOffset": 1156,
-                        "endColumn": 52,
-                        "endOffset": 1204
+                        "startOffset": 1032,
+                        "endColumn": 43,
+                        "endOffset": 1071
                     }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 1195,
+                    "endColumn": 45,
+                    "endOffset": 1236
+                },
+                "from": {
+                    "file": "C:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 4,
+                        "startOffset": 986,
+                        "endColumn": 45,
+                        "endOffset": 1027
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 1241,
+                    "endColumn": 43,
+                    "endOffset": 1280
+                },
+                "from": {
+                    "file": "C:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 27,
+                        "startColumn": 4,
+                        "startOffset": 1122,
+                        "endColumn": 43,
+                        "endOffset": 1161
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 1285,
+                    "endColumn": 45,
+                    "endOffset": 1326
+                },
+                "from": {
+                    "file": "C:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 26,
+                        "startColumn": 4,
+                        "startOffset": 1076,
+                        "endColumn": 45,
+                        "endOffset": 1117
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 26,
+                    "startColumn": 4,
+                    "startOffset": 1331,
+                    "endColumn": 75,
+                    "endOffset": 1402
+                },
+                "from": {
+                    "file": "C:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 31,
+                        "startColumn": 4,
+                        "startOffset": 1265,
+                        "endColumn": 75,
+                        "endOffset": 1336
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 1407,
+                    "endColumn": 55,
+                    "endOffset": 1458
+                },
+                "from": {
+                    "file": "C:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 28,
+                    "startColumn": 4,
+                    "startOffset": 1463,
+                    "endColumn": 48,
+                    "endOffset": 1507
+                },
+                "from": {
+                    "file": "C:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 29,
+                    "startColumn": 4,
+                    "startOffset": 1512,
+                    "endColumn": 61,
+                    "endOffset": 1569
+                },
+                "from": {
+                    "file": "C:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 30,
+                    "startColumn": 4,
+                    "startOffset": 1574,
+                    "endColumn": 52,
+                    "endOffset": 1622
+                },
+                "from": {
+                    "file": "C:\\Users\\Calvin\\AndroidStudioProjects\\restfulCachingProviderContacts\\app\\src\\main\\res\\values\\strings.xml"
                 }
             }
         ]

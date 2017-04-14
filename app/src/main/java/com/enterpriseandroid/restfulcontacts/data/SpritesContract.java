@@ -5,11 +5,11 @@ import android.net.Uri;
 import android.provider.BaseColumns;
 
 
-public final class ContactsContract {
-    private ContactsContract() {}
+public final class SpritesContract {
+    private SpritesContract() {}
 
-    public static final String TABLE = "contacts";
-    public static final String AUTHORITY = "com.enterpriseandroid.restfulcontacts.CONTACTS";
+    public static final String TABLE = "sprite";
+    public static final String AUTHORITY = "com.enterpriseandroid.restfulsprites.sprite";
 
     public static final Uri URI
         = new Uri.Builder()
@@ -18,15 +18,15 @@ public final class ContactsContract {
             .appendPath(TABLE)
             .build();
 
-    /** Contacts DIR type */
+    /** Sprites DIR type */
     public static final String CONTENT_TYPE_DIR
         = ContentResolver.CURSOR_DIR_BASE_TYPE
-            + " + /vnd.com.enterpriseandroid.restfulcontacts.contacts";
+            + " + /vnd.com.enterpriseandroid.restfulsprites.sprite";
 
-    /** Contacts ITEM type */
+    /** Sprites ITEM type */
     public static final String CONTENT_TYPE_ITEM
         = ContentResolver.CURSOR_ITEM_BASE_TYPE
-            + "/vnd.com.enterpriseandroid.restfulcontacts.contacts";
+            + "/vnd.com.enterpriseandroid.restfulsprites.sprite";
 
     public static final int STATUS_OK = 0;
     public static final int STATUS_SYNC = 1;
@@ -36,12 +36,14 @@ public final class ContactsContract {
         private Columns() {}
 
         public static final String ID = BaseColumns._ID;  // long
-        public static final String FNAME = "firstName";   // string
-        public static final String LNAME = "lastName";    // string
-        public static final String PHONE = "phone";       // string
-        public static final String EMAIL = "email";       // string
-        public static final String STATUS = "status";     // int
-
+        public static final String COLOR = "color";    // string
+        public static final String DX = "dx";    // string
+        public static final String DY = "dy";       // string
+        public static final String PANEL_HEIGHT = "panelheight";       // string
+        public static final String PANEL_WIDTH = "panelwidth";       // string
+        public static final String X = "x";       // string
+        public static final String Y = "y";     // string
+        public static final String STATUS = "status"; //string
         // !!!
         // These columns really should not be exposed.
         public static final String SYNC = "sync";         // string!

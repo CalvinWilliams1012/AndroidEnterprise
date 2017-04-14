@@ -6,16 +6,16 @@ import android.net.Uri;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
-public class ContactsApplication extends Application
+public class SpritesApplication extends Application
     implements SharedPreferences.OnSharedPreferenceChangeListener
 {
     private static final String TAG = "APP";
 
-    private static final String EMULATOR_HOST_IP = "192.168.225.133";
+    private static final String EMULATOR_HOST_IP = "localhost";
     private static final String APPENGINE_HOST = "your_app_id_here.appspot.com";
     private static final String LOCAL_APPENGINE_HOST = EMULATOR_HOST_IP;
 
-    private static final String SPRING_SERVICE = "/ContactDB/webresources";
+    private static final String SPRING_SERVICE = "/SpriteDB/webresources";
     private static final String SPRING_SYNC_SERVICE = "/springSyncServiceContacts";
     private static final String AWS_SERVICE = "/awsServiceContacts";
     private static final String APP_ENGINE_SERVICE = ""; // no app context for appspot.com
@@ -23,7 +23,7 @@ public class ContactsApplication extends Application
     private static final String TEST_PORT = "8080";
     private static final String HTTP_DEFAULT_PORT = ""; // will be 80
 
-    private static final String CONTACTS = "/entities.contact";
+    private static final String SPRITES = "/entities.sprite";
 
     private static final String HTTP = "http";
     private static final String HTTPS = "https";
@@ -38,12 +38,12 @@ public class ContactsApplication extends Application
     // on first run, when it gets saved as a preference below in
     // getApiUri.
     private static final String DEFAULT_API_ROOT =
-            PROTOCOL + "://" + HOST + ":" + PORT + SERVICE + CONTACTS;
+            PROTOCOL + "://" + HOST + ":" + PORT + SERVICE + SPRITES;
 
     private String keyApiRoot;
     private Uri apiRootUri;
 
-    public ContactsApplication() {
+    public SpritesApplication() {
         /**
          * Disable the persistent connection since We cannot get it work using HttpURLConnection.
          */

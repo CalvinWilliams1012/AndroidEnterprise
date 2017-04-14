@@ -18,11 +18,11 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import com.enterpriseandroid.restfulcontacts.BuildConfig;
-import com.enterpriseandroid.restfulcontacts.ContactsApplication;
+import com.enterpriseandroid.restfulcontacts.SpritesApplication;
 import com.enterpriseandroid.restfulcontacts.R;
-import com.enterpriseandroid.restfulcontacts.data.ContactsContract;
-import com.enterpriseandroid.restfulcontacts.data.ContactsHelper;
-import com.enterpriseandroid.restfulcontacts.data.ContactsProvider;
+import com.enterpriseandroid.restfulcontacts.data.SpritesContract;
+import com.enterpriseandroid.restfulcontacts.data.SpritesHelper;
+import com.enterpriseandroid.restfulcontacts.data.SpritesProvider;
 
 
 public class RESTService extends IntentService {
@@ -54,12 +54,16 @@ public class RESTService extends IntentService {
         int toInt() { return (ordinal() + 1) * -1; }
     }
 
+
     public static final String XACT = "RESTService.XACT";
     public static final String ID = "RESTService.ID";
-    public static final String FNAME = "RESTService.FNAME";
-    public static final String LNAME = "RESTService.LNAME";
-    public static final String PHONE = "RESTService.PHONE";
-    public static final String EMAIL = "RESTService.EMAIL";
+    public static final String COLOR = "RESTService.COLOR";
+    public static final String DX = "RESTService.DX";
+    public static final String DY = "RESTService.DY";
+    public static final String PANEL_HEIGHT = "RESTService.PANEL_HEIGHT";
+    public static final String PANEL_WIDTH = "RESTService.PANEL_WIDTH";
+    public static final String X = "RESTService.X";
+    public static final String Y = "RESTService.Y";
 
     private static final String OP = "RESTService.OP";
 
@@ -113,21 +117,37 @@ public class RESTService extends IntentService {
     // the server always wants all values
     private static void marshalRequest(ContentValues vals, Intent intent) {
         intent.putExtra(
-            RESTService.FNAME,
-            (!vals.containsKey(ContactsHelper.COL_FNAME))
-                ? "" : vals.getAsString(ContactsHelper.COL_FNAME));
+                RESTService.ID,
+                (!vals.containsKey(SpritesHelper.COL_ID))
+                        ? "" : vals.getAsString(SpritesHelper.COL_ID));
         intent.putExtra(
-            RESTService.LNAME,
-            (!vals.containsKey(ContactsHelper.COL_LNAME))
-                ? "" : vals.getAsString(ContactsHelper.COL_LNAME));
+                RESTService.COLOR,
+                (!vals.containsKey(SpritesHelper.COL_COLOR))
+                        ? "" : vals.getAsString(SpritesHelper.COL_COLOR));
         intent.putExtra(
-            RESTService.PHONE,
-            (!vals.containsKey(ContactsHelper.COL_PHONE))
-                ? "" : vals.getAsString(ContactsHelper.COL_PHONE));
+                RESTService.DX,
+                (!vals.containsKey(SpritesHelper.COL_DX))
+                        ? "" : vals.getAsString(SpritesHelper.COL_DX));
         intent.putExtra(
-            RESTService.EMAIL,
-            (!vals.containsKey(ContactsHelper.COL_EMAIL))
-                ? "" : vals.getAsString(ContactsHelper.COL_EMAIL));
+                RESTService.DY,
+                (!vals.containsKey(SpritesHelper.COL_DY))
+                        ? "" : vals.getAsString(SpritesHelper.COL_DY));
+        intent.putExtra(
+                RESTService.PANEL_HEIGHT,
+                (!vals.containsKey(SpritesHelper.COL_PANEL_HEIGHT))
+                        ? "" : vals.getAsString(SpritesHelper.COL_PANEL_HEIGHT));
+        intent.putExtra(
+                RESTService.PANEL_WIDTH,
+                (!vals.containsKey(SpritesHelper.COL_PANEL_WIDTH))
+                        ? "" : vals.getAsString(SpritesHelper.COL_PANEL_WIDTH));
+        intent.putExtra(
+                RESTService.X,
+                (!vals.containsKey(SpritesHelper.COL_X))
+                        ? "" : vals.getAsString(SpritesHelper.COL_X));
+        intent.putExtra(
+                RESTService.Y,
+                (!vals.containsKey(SpritesHelper.COL_Y))
+                        ? "" : vals.getAsString(SpritesHelper.COL_Y));
     }
 
     private static interface ResponseHandler {
@@ -180,7 +200,7 @@ public class RESTService extends IntentService {
         if (args.containsKey(ID)) {
             throw new IllegalArgumentException("create must not specify id");
         }
-        Uri uri = ((ContactsApplication) getApplication()).getApiUri();
+        Uri uri = ((SpritesApplication) getApplication()).getApiUri();
 
         final ContentValues vals = new ContentValues();
         try {
@@ -198,7 +218,7 @@ public class RESTService extends IntentService {
                         new MessageHandler().unmarshal(in, vals);
                     } });
 
-            vals.putNull(ContactsContract.Columns.DIRTY);
+            vals.putNull(SpritesContract.Columns.DIRTY);
         }
         catch (Exception e) {
             Log.w(TAG, "create failed: " + e, e);
@@ -213,7 +233,7 @@ public class RESTService extends IntentService {
             throw new IllegalArgumentException("missing id in update");
         }
 
-        Uri uri = ((ContactsApplication) getApplication()).getApiUri()
+        Uri uri = ((SpritesApplication) getApplication()).getApiUri()
             .buildUpon().appendPath(args.getString(ID)).build();
 
         final ContentValues vals = new ContentValues();
@@ -233,7 +253,7 @@ public class RESTService extends IntentService {
                     } });
 
             checkId(args, vals);
-            vals.putNull(ContactsContract.Columns.DIRTY);
+            vals.putNull(SpritesContract.Columns.DIRTY);
         }
         catch (Exception e) {
             Log.w(TAG, "update failed: " + e);
@@ -247,7 +267,7 @@ public class RESTService extends IntentService {
         if (!args.containsKey(ID)) {
             throw new IllegalArgumentException("missing id in delete");
         }
-        Uri uri = ((ContactsApplication) getApplication()).getApiUri()
+        Uri uri = ((SpritesApplication) getApplication()).getApiUri()
             .buildUpon().appendPath(args.getString(ID)).build();
 
         try { sendRequest(HttpMethod.DELETE, uri, null, null); }
@@ -264,15 +284,15 @@ public class RESTService extends IntentService {
         // Using the transaction id to identify the record needing update
         // causes a data race if there is more than one update in progress
         getContentResolver().delete(
-            ContactsContract.URI,
-            ContactsProvider.SYNC_CONSTRAINT,
+            SpritesContract.URI,
+            SpritesProvider.SYNC_CONSTRAINT,
             new String[] { args.getString(XACT) });
     }
 
     private void cleanup(Bundle args, ContentValues vals) {
         if (null == vals) { vals = new ContentValues(); }
 
-        vals.putNull(ContactsContract.Columns.SYNC);
+        vals.putNull(SpritesContract.Columns.SYNC);
         if (BuildConfig.DEBUG) {
             Log.d(TAG, "cleanup @" + args.getString(XACT) + ": " + vals);
         }
@@ -280,14 +300,14 @@ public class RESTService extends IntentService {
         String sel;
         String[] selArgs;
         if (!args.containsKey(ID)) {
-            sel = ContactsProvider.SYNC_CONSTRAINT;
+            sel = SpritesProvider.SYNC_CONSTRAINT;
             selArgs = new String[] { args.getString(XACT) };
         }
         else {
             sel = new StringBuilder("(")
-                .append(ContactsProvider.SYNC_CONSTRAINT)
+                .append(SpritesProvider.SYNC_CONSTRAINT)
                 .append(") AND (")
-                .append(ContactsProvider.REMOTE_ID_CONSTRAINT)
+                .append(SpritesProvider.REMOTE_ID_CONSTRAINT)
                 .append(")")
                 .toString();
             selArgs = new String[] { args.getString(XACT), args.getString(XACT) };
@@ -296,16 +316,16 @@ public class RESTService extends IntentService {
         // !!!
         // Using the transaction id to identify the record needing update
         // causes a data race if there is more than one update in progress
-        getContentResolver().update(ContactsContract.URI, vals, sel, selArgs);
+        getContentResolver().update(SpritesContract.URI, vals, sel, selArgs);
     }
 
     private void checkId(Bundle args, ContentValues vals) {
         String id = args.getString(ID);
-        String rid = vals.getAsString(ContactsContract.Columns.REMOTE_ID);
+        String rid = vals.getAsString(SpritesContract.Columns.REMOTE_ID);
         if (!id.equals(rid)) {
             Log.w(TAG, "request id does not match response id: " + id + ", " + rid);
         }
-        vals.remove(ContactsContract.Columns.REMOTE_ID);
+        vals.remove(SpritesContract.Columns.REMOTE_ID);
     }
 
     // the return code is being ignored, at present

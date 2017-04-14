@@ -7,7 +7,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="d5b10dda2388b742b1ce1b70cb54dcc999c8c7fe">
+        sha1="d1048da9cfd48f6323a9af229e80528f54bcfcb0">
         <dex dex="C:\Users\Calvin\AndroidStudioProjects\restfulCachingProviderContacts\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_1844aadd69c415f2f81880e6734c501427ab454e\classes.dex" />
     </item>
     <item
@@ -16,7 +16,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
         <dex dex="C:\Users\Calvin\AndroidStudioProjects\restfulCachingProviderContacts\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_e5be127c2cc5dfbd2b0e3c8b202dea5f9a491f59\classes.dex" />
     </item>
 
