@@ -179,15 +179,15 @@ public class RESTService extends IntentService {
         if (args.containsKey(OP)) { op = args.getInt(OP); }
         switch (Op.toOp(op)) {
             case CREATE:
-                createContact(args);
+                createSprite(args);
                 break;
 
             case UPDATE:
-                updateContact(args);
+                updateSprite(args);
                 break;
 
             case DELETE:
-                deleteContact(args);
+                deleteSprite(args);
                 break;
 
             default:
@@ -196,10 +196,12 @@ public class RESTService extends IntentService {
         }
     }
 
-    private void createContact(Bundle args) {
-        if (args.containsKey(ID)) {
-            throw new IllegalArgumentException("create must not specify id");
-        }
+    private void createSprite(Bundle args) {
+
+        /**if (args.containsKey(ID)) {
+         throw new IllegalArgumentException("create must not specify id");
+         }*/
+
         Uri uri = ((SpritesApplication) getApplication()).getApiUri();
 
         final ContentValues vals = new ContentValues();
@@ -228,7 +230,7 @@ public class RESTService extends IntentService {
         }
     }
 
-    private void updateContact(Bundle args) {
+    private void updateSprite(Bundle args) {
         if (!args.containsKey(ID)) {
             throw new IllegalArgumentException("missing id in update");
         }
@@ -263,7 +265,7 @@ public class RESTService extends IntentService {
         }
     }
 
-    private void deleteContact(Bundle args) {
+    private void deleteSprite(Bundle args) {
         if (!args.containsKey(ID)) {
             throw new IllegalArgumentException("missing id in delete");
         }
@@ -374,6 +376,9 @@ public class RESTService extends IntentService {
                 hdlr.handleResponse(new BufferedReader(
                     new InputStreamReader(conn.getInputStream())));
             }
+        }
+        catch(Exception e){
+            Log.e("Connection Error:","HTTP Response code: "+conn.getResponseCode(),e);
         }
         finally {
             if (null != conn) {

@@ -5,7 +5,7 @@
     <string name="app_name">RESTfulSprites</string>
     <string name="app_version">1.0RC7</string>
     <string name="contacts_add">New</string>
-    <string name="contacts_authority">com.enterpriseandroid.restfulcontacts.CONTACTS</string>
+    <string name="contacts_authority">com.enterpriseandroid.restfulsprites.sprite</string>
     <string name="detail_color_hint">color</string>
     <string name="detail_color_label">Color:</string>
     <string name="detail_delete">Delete</string>
@@ -27,6 +27,6 @@
     <string name="name_required">A sprite must have at least an id</string>
     <string name="prefs_sync_title">Sync prefs</string>
     <string name="prefs_title">Settings</string>
-    <string name="prefs_url_key">RESTfulContacts.URI</string>
+    <string name="prefs_url_key">RESTfulSprites.URI</string>
     <string name="prefs_url_title">Sync URL</string>
 </resources>

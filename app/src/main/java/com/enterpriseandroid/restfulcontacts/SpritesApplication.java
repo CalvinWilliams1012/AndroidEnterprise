@@ -11,7 +11,7 @@ public class SpritesApplication extends Application
 {
     private static final String TAG = "APP";
 
-    private static final String EMULATOR_HOST_IP = "localhost";
+    private static final String EMULATOR_HOST_IP = "10.0.2.2";
     private static final String APPENGINE_HOST = "your_app_id_here.appspot.com";
     private static final String LOCAL_APPENGINE_HOST = EMULATOR_HOST_IP;
 

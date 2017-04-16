@@ -36,8 +36,8 @@
     <string name="prefs_title">Settings</string>
     <string name="prefs_sync_title">Sync prefs</string>
     <string name="prefs_url_title">Sync URL</string>
-    <string name="prefs_url_key">RESTfulContacts.URI</string>
+    <string name="prefs_url_key">RESTfulSprites.URI</string>
 
     <!-- Provider -->
-    <string name="contacts_authority">com.enterpriseandroid.restfulcontacts.CONTACTS</string>
+    <string name="contacts_authority">com.enterpriseandroid.restfulsprites.sprite</string>
 </resources>
