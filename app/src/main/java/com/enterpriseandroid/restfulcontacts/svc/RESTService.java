@@ -8,6 +8,8 @@ import java.io.OutputStreamWriter;
 import java.io.Writer;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 
 import android.app.IntentService;
@@ -41,6 +43,20 @@ public class RESTService extends IntentService {
     public static final int HTTP_READ_TIMEOUT = 30 * 1000; // ms
     public static final int HTTP_CONN_TIMEOUT = 30 * 1000; // ms
 
+    public static final String XACT = "RESTService.XACT";
+    public static final String ID = "RESTService.ID";
+
+    public static final String COLOR = "RESTService.COLOR";
+    public static final String DX = "RESTService.DX";
+    public static final String DY = "RESTService.DY";
+    public static final String PANEL_HEIGHT = "RESTService.PANEL_HEIGHT";
+    public static final String PANEL_WIDTH = "RESTService.PANEL_WIDTH";
+    public static final String X = "RESTService.X";
+    public static final String Y = "RESTService.Y";
+
+    private static final String OP = "RESTService.OP";
+
+
     public static enum Op {
         NOOP, CREATE, UPDATE, DELETE;
 
@@ -53,20 +69,6 @@ public class RESTService extends IntentService {
         }
         int toInt() { return (ordinal() + 1) * -1; }
     }
-
-
-    public static final String XACT = "RESTService.XACT";
-    public static final String ID = "RESTService.ID";
-    public static final String COLOR = "RESTService.COLOR";
-    public static final String DX = "RESTService.DX";
-    public static final String DY = "RESTService.DY";
-    public static final String PANEL_HEIGHT = "RESTService.PANEL_HEIGHT";
-    public static final String PANEL_WIDTH = "RESTService.PANEL_WIDTH";
-    public static final String X = "RESTService.X";
-    public static final String Y = "RESTService.Y";
-
-    private static final String OP = "RESTService.OP";
-
 
     public static String insert(Context ctxt, ContentValues vals) {
         Intent intent = getIntent(ctxt, RESTService.Op.CREATE);
@@ -373,12 +375,20 @@ public class RESTService extends IntentService {
             code = conn.getResponseCode();
 
             if (null != hdlr) {
-                hdlr.handleResponse(new BufferedReader(
-                    new InputStreamReader(conn.getInputStream())));
+                try {
+                    hdlr.handleResponse(new BufferedReader(
+                            new InputStreamReader(conn.getInputStream())));
+                }catch(Exception e){
+                    Log.e("Error with response:","HTTP Code:" + conn.getResponseCode() + "\n HTTP Message:" + conn.getResponseMessage() + "\nError Message:" + e.toString() ,e);
+                }
+
+
+
             }
         }
         catch(Exception e){
-            Log.e("Connection Error:","HTTP Response code: "+conn.getResponseCode(),e);
+
+            Log.e("Connection Error:","HTTP Response code: "+conn.getResponseCode() + " HTTP message :" + conn.getResponseMessage(),e);
         }
         finally {
             if (null != conn) {

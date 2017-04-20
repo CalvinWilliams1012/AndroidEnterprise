@@ -15,15 +15,15 @@ public class SpritesApplication extends Application
     private static final String APPENGINE_HOST = "your_app_id_here.appspot.com";
     private static final String LOCAL_APPENGINE_HOST = EMULATOR_HOST_IP;
 
-    private static final String SPRING_SERVICE = "/SpriteDB/webresources";
+    private static final String SPRING_SERVICE = "/SpriteEE-war/webresources";
     private static final String SPRING_SYNC_SERVICE = "/springSyncServiceContacts";
     private static final String AWS_SERVICE = "/awsServiceContacts";
     private static final String APP_ENGINE_SERVICE = ""; // no app context for appspot.com
 
-    private static final String TEST_PORT = "8080";
+    private static final String TEST_PORT = "9090";
     private static final String HTTP_DEFAULT_PORT = ""; // will be 80
 
-    private static final String SPRITES = "/entities.sprite";
+    private static final String SPRITES = "/business.sprite";
 
     private static final String HTTP = "http";
     private static final String HTTPS = "https";
