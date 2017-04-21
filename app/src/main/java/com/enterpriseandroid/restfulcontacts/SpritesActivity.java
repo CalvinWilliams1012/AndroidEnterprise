@@ -17,7 +17,9 @@ import android.widget.SimpleCursorAdapter;
 import com.enterpriseandroid.restfulcontacts.data.SpritesContract;
 
 /**
- *
+ * Start point for the android app. which contains a listview of local sprites.
+ *Created using Contact example refactored to sprite by author.
+ * @author Calvin Williams
  */
 public class SpritesActivity extends BaseActivity
     implements LoaderManager.LoaderCallbacks<Cursor>

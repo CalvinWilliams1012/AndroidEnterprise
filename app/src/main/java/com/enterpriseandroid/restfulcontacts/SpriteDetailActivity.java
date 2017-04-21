@@ -17,7 +17,11 @@ import android.content.Loader;
 import android.database.Cursor;
 import com.enterpriseandroid.restfulcontacts.data.SpritesContract;
 
-
+/**
+ * Sprite detail activity displays a single sprites details. called from new, or when you click a sprite.
+ * Created using Contact example refactored to sprite by author.
+ * @author Calvin Williams
+ */
 public class SpriteDetailActivity extends BaseActivity
     implements LoaderManager.LoaderCallbacks<Cursor>
 {
@@ -38,6 +42,9 @@ public class SpriteDetailActivity extends BaseActivity
             SpritesContract.Columns.STATUS
     };
 
+    /**
+     * Async for updating a sprite
+     */
     static class UpdateSprite extends AsyncTask<Uri, Void, Void> {
         private final ContentResolver resolver;
         private final ContentValues vals;
@@ -56,6 +63,9 @@ public class SpriteDetailActivity extends BaseActivity
         }
     }
 
+    /**
+     * Async for deleting a sprite.
+     */
     static class DeleteSprite extends AsyncTask<Uri, Void, Void> {
         private final ContentResolver resolver;
 
@@ -89,19 +99,38 @@ public class SpriteDetailActivity extends BaseActivity
     private String y = "";
     private Uri contactUri;
 
+    /**
+     * Loads the cursor for the sprite
+     * @param id
+     * @param args
+     * @return
+     */
     @Override
     public Loader<Cursor> onCreateLoader(int id, Bundle args) {
         return new CursorLoader(this, contactUri, PROJ, null, null, null);
     }
 
+    /**
+     * When the load is finsihed populate the view with the values grabbed from the db
+     * @param loader
+     * @param cursor
+     */
     @Override
     public void onLoadFinished(Loader<Cursor> loader, Cursor cursor) {
         populateView(cursor);
     }
 
+    /**
+     * unimplimented
+     * @param loader
+     */
     @Override
     public void onLoaderReset(Loader<Cursor> loader) { }
 
+    /**
+     * On create which initializes all GUi elements.
+     * @param state
+     */
     @Override
     protected void onCreate(Bundle state) {
         super.onCreate(state);
@@ -144,6 +173,9 @@ public class SpriteDetailActivity extends BaseActivity
         }
     }
 
+    /**
+     * Delete method for deleting a sprite
+     */
     void delete() {
         if (null != contactUri) {
             new DeleteSprite(getContentResolver()).execute(contactUri);
@@ -151,6 +183,9 @@ public class SpriteDetailActivity extends BaseActivity
         goToSprites();
     }
 
+    /**
+     * Ipdate method for updating a sprite.
+     */
     void update() {
         ContentValues vals = new ContentValues();
         addString(idView, id, vals, SpritesContract.Columns.ID);
@@ -165,6 +200,10 @@ public class SpriteDetailActivity extends BaseActivity
         goToSprites();
     }
 
+    /**
+     * Populated and updates gui based on cursor db query.
+     * @param c
+     */
     private void populateView(Cursor c) {
         if (!c.moveToNext()) { return; }
 
@@ -206,6 +245,9 @@ public class SpriteDetailActivity extends BaseActivity
         yView.setText(y);
     }
 
+    /**
+     * go to the sprites activity class with intent.
+     */
     private void goToSprites() {
         Intent intent = new Intent(this, SpritesActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);

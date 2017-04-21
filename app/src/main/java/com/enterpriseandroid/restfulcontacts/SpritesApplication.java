@@ -6,6 +6,11 @@ import android.net.Uri;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
+/**
+ * SpritesApplication contains a lot of config variables and initialization.
+ * Created using Contact example refactored to sprite by author.
+ * @author Calvin Williams
+ */
 public class SpritesApplication extends Application
     implements SharedPreferences.OnSharedPreferenceChangeListener
 {
@@ -51,7 +56,9 @@ public class SpritesApplication extends Application
 
     }
 
-    
+    /**
+     * on create sets the preference listener when the shared prefs are changed
+     */
     @Override
     public void onCreate() {
         super.onCreate();
@@ -63,6 +70,9 @@ public class SpritesApplication extends Application
             .registerOnSharedPreferenceChangeListener(this);
     }
 
+    /**
+     * When the prefs are changed make the api root uri null.
+     */
     @Override
     public synchronized void onSharedPreferenceChanged(
         SharedPreferences prefs,
@@ -71,6 +81,10 @@ public class SpritesApplication extends Application
         apiRootUri = null;
     }
 
+    /**
+     * Method to get the api uri from prefs.
+     * @return api uri
+     */
     public Uri getApiUri() {
         synchronized (this) {
             if (null == apiRootUri) {

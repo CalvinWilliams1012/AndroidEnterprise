@@ -5,7 +5,11 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 
-
+/**
+ * Database helper for saving the sprites locally on android.
+ * Created using Contact example refactored to sprite by author.
+ * @author Calvin Williams
+ */
 public class SpritesHelper extends SQLiteOpenHelper {
     static final int VERSION = 2;
 
@@ -31,11 +35,18 @@ public class SpritesHelper extends SQLiteOpenHelper {
     static final String COL_DIRTY = "dirty";             // boolean (null or MARK)
     static final String COL_SYNC = "sync";               // string
 
-
+    /**
+     * Constructor that takes the context.
+     * @param context android context.
+     */
     public SpritesHelper(Context context) {
         super(context, DB_FILE, null, VERSION);
     }
 
+    /**
+     * Oncreate which creates the table for saving sprites.
+     * @param db database to create in.
+     */
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(
@@ -54,6 +65,12 @@ public class SpritesHelper extends SQLiteOpenHelper {
                     + COL_SYNC + " string UNIQUE)");
     }
 
+    /**
+     * When the version num is changed upgrade method.
+     * @param db database to upgrade
+     * @param oldVersion old version num
+     * @param newVersion new version num
+     */
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         try { db.execSQL("drop table " + TAB_SPRITES); }

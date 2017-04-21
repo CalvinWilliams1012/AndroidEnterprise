@@ -17,7 +17,11 @@ import net.callmeike.android.data.util.ProjectionMap;
 import com.enterpriseandroid.restfulcontacts.BuildConfig;
 import com.enterpriseandroid.restfulcontacts.svc.RESTService;
 
-
+/**
+ * sprite REST class for communicating  with server.
+ * Created using Contact example refactored to sprite by author.
+ * @author Calvin Williams
+ */
 public class SpritesProvider extends ContentProvider {
     public static final String PK_CONSTRAINT = SpritesHelper.COL_ID + "=";
     public static final String SYNC_CONSTRAINT = SpritesHelper.COL_SYNC + "=?";
@@ -115,6 +119,11 @@ public class SpritesProvider extends ContentProvider {
 
     private volatile SpritesHelper helper;
 
+    /**
+     * on create method that initializes the helper.
+     * returns null if the helper could not be created.
+     * @return
+     */
     @Override
     public boolean onCreate() {
         if (BuildConfig.DEBUG) { Log.d(TAG, "created"); }
@@ -122,6 +131,11 @@ public class SpritesProvider extends ContentProvider {
         return null != helper;
     }
 
+    /**
+     * Getter for the uri type.
+     * @param uri URI you wish to get the type of
+     * @return type of uri in which you entered or null if neither.
+     */
     @Override
     public String getType(Uri uri) {
         switch (uriMatcher.match(uri)) {
@@ -134,6 +148,12 @@ public class SpritesProvider extends ContentProvider {
         }
     }
 
+    /**
+     * Inserts into the database as well as calling a rest call for insert.
+     * @param uri specified uri
+     * @param vals values of the sprite/content.
+     * @return localInsert returned value.
+     */
     @Override
     public Uri insert(Uri uri, ContentValues vals) {
         if (BuildConfig.DEBUG) { Log.d(TAG, "insert@" + uri); }
@@ -156,6 +176,14 @@ public class SpritesProvider extends ContentProvider {
         return localInsert(uri, vals);
     }
 
+    /**
+     * Updates the specified sprite.
+     * @param uri
+     * @param vals
+     * @param sel
+     * @param sArgs
+     * @return
+     */
     @Override
     public int update(Uri uri, ContentValues vals, String sel, String[] sArgs) {
         if (BuildConfig.DEBUG) { Log.d(TAG, "update@" + uri); }
@@ -189,6 +217,13 @@ public class SpritesProvider extends ContentProvider {
         return localUpdate(uri, vals, sel, sArgs);
     }
 
+    /**
+     * Delete locally and with rest call.
+     * @param uri
+     * @param sel
+     * @param sArgs
+     * @return
+     */
     @Override
     public int delete(Uri uri, String sel, String[] sArgs) {
         if (BuildConfig.DEBUG) { Log.d(TAG, "delete@" + uri); }
@@ -224,6 +259,15 @@ public class SpritesProvider extends ContentProvider {
 
     }
 
+    /**
+     * Cursor for querying db
+     * @param uri
+     * @param proj
+     * @param sel
+     * @param selArgs
+     * @param ord
+     * @return
+     */
     @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
     @SuppressWarnings("fallthrough")
     @Override
@@ -268,6 +312,12 @@ public class SpritesProvider extends ContentProvider {
         return cur;
     }
 
+    /**
+     * inserts values into local db
+     * @param uri
+     * @param vals
+     * @return
+     */
     public Uri localInsert(Uri uri, ContentValues vals) {
         if (BuildConfig.DEBUG) {
             Log.d(TAG, "insert@" + uri + ": {" + vals + "}");
@@ -287,6 +337,14 @@ public class SpritesProvider extends ContentProvider {
         return uri;
     }
 
+    /**
+     * Updates values in local db.
+     * @param uri
+     * @param vals
+     * @param sel
+     * @param sArgs
+     * @return
+     */
     public int localUpdate(
         Uri uri,
         ContentValues vals,
@@ -316,6 +374,13 @@ public class SpritesProvider extends ContentProvider {
         return updated;
     }
 
+    /**
+     * Deletes values in local db.
+     * @param uri
+     * @param sel
+     * @param sArgs
+     * @return
+     */
     public int localDelete(Uri uri, String sel, String[] sArgs) {
         if (BuildConfig.DEBUG) {
             StringBuilder buf = new StringBuilder(sel);
@@ -337,6 +402,15 @@ public class SpritesProvider extends ContentProvider {
         return updated;
     }
 
+    /**
+     * Cursor for local db query.
+     * @param qb
+     * @param proj
+     * @param sel
+     * @param selArgs
+     * @param ord
+     * @return
+     */
     public Cursor localQuery(
         SQLiteQueryBuilder qb,
         String[] proj,
@@ -359,6 +433,12 @@ public class SpritesProvider extends ContentProvider {
     // been synched with the server, things may happen out of order.
     // Things can get quite weird.
     // Client side only!  Not for use on server URIs!
+
+    /**
+     * Retrieving remote id for rest.
+     * @param uri
+     * @return
+     */
     private String getRemoteId(Uri uri) {
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
         qb.setTables(SpritesHelper.TAB_SPRITES);
@@ -374,6 +454,12 @@ public class SpritesProvider extends ContentProvider {
         }
     }
 
+    /**
+     * Method to add Primary Key constraint to the speciified id in the uri passed.
+     * @param uri
+     * @param sel
+     * @return
+     */
     private String addPkConstraint(Uri uri, String sel) {
         String pkConstraint = PK_CONSTRAINT + ContentUris.parseId(uri);
         sel = (null == sel)

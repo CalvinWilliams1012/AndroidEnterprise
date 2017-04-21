@@ -4,8 +4,15 @@ import android.content.ContentResolver;
 import android.net.Uri;
 import android.provider.BaseColumns;
 
-
+/**
+ * SpritesContract class which contains the table structure for saving a sprite, the table name, authority, URI, content type dir, and item. Also contains status'.
+ * Created using Contact example refactored to sprite by author.
+ * @author Calvin Williams
+ */
 public final class SpritesContract {
+    /**
+     * Default constructor
+     */
     private SpritesContract() {}
 
     public static final String TABLE = "sprite";
@@ -32,6 +39,9 @@ public final class SpritesContract {
     public static final int STATUS_SYNC = 1;
     public static final int STATUS_DIRTY = 2;
 
+    /**
+     * Columns in the sprite table.
+     */
     public static final class Columns implements BaseColumns {
         private Columns() {}
 
